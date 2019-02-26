@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t node-with-docker .
+  - docker run node-with-docker /bin/sh -c "node --version && docker info && docker-compose version && docker-machine version"
