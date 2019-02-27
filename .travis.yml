@@ -4,5 +4,5 @@ services:
   - docker
 
 script:
-  - docker build -t node-with-docker .
-  - docker run -v /var/run/docker.sock:/var/run/docker.sock node-with-docker /bin/sh -c "node --version && docker info && docker-compose version && docker-machine version"
+  - make
+  - make test
